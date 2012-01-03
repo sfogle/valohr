@@ -1,0 +1,11 @@
+Make a reservation:
+
+{% if rooms_list %}
+    <ul>
+    {% for room in rooms_list %}
+        <li><a href="/valohr/{{ room.room_name }}">{{ room.room_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No rooms are available.</p>
+{% endif %}

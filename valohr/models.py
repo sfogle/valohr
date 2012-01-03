@@ -36,12 +36,8 @@ class Bed(models.Model):
     def __unicode__(self):
         return self.get_size_display()
 
-#class Bed(models.Model):
-#    SIZES = (
-#        ('T', 'Twin'),
-#        ('D', 'Double'),
-#        ('Q', 'Queen'),
-#        ('K', 'King'),
-#    )
-#    size = models.CharField(max_length=1,choices=SIZES)
+class Reservation(models.Model):
+    room = models.ForeignKey(Room)
+    arrival_date = models.DateField()
+    departure_date = models.DateField()
 
